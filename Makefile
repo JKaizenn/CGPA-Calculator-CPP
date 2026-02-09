@@ -1,5 +1,6 @@
 CXX = g++
 CXXFLAGS = -I./include -std=c++17
+SRCS = $(wildcard src/*.cpp)
 
-main: src/main.cpp
-	$(CXX) $(CXXFLAGS) src/main.cpp -o bin/main
+main: $(SRCS)
+	$(CXX) $(CXXFLAGS) $(SRCS) -o bin/main

@@ -9,7 +9,6 @@
 
 #pragma once
 
-
 /************************************
  * GPA
  ************************************/
@@ -34,8 +33,7 @@ public:
 
 private:
     double gpa {};
-    double convertToInt(double gpa) const
-    {
+    double convertToInt(double gpa) const {
         return static_cast<int>(gpa);
     }
 
