@@ -6,9 +6,7 @@
 
 int main()
 {
-
-    std::cout << "Welcome to the CGPA calculator! " << '\n';
-    std::cout << "Please enter one of the following menu options: " << '\n';
+    std::cout << "Welcome to the CGPA Calculator!" << '\n';
 
 
     return 0;

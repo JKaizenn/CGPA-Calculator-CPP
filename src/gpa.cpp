@@ -1,14 +1,11 @@
 #include "gpa.h"
 
 
-// Constructors:
+// User input
+double GPA::promptForGpa()
+{
+    std::cout << "Please enter your GPA: " << '\n';
+    std::cin  >> this->gpa;
 
-
-// Default Constructor
-
-
-// Calculate CGPA
-
-
-
-// Display
+    return this->gpa;
+}

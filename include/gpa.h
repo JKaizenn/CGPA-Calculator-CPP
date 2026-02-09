@@ -1,33 +1,42 @@
-#include "course.h"
-#include <vector>
+/***********************************************************************
+ * Header File:
+ *    GPA
+ * Author:
+ *    Jessen
+ * Summary:
+ *    Everything we need to know about a GPA
+ ************************************************************************/
 
 #pragma once
 
+
+/************************************
+ * GPA
+ ************************************/
 class GPA
 {
-private:
-    double gpa = 0.0;
-    int creditHours;
-    std::vector<Course> courses;
-
 public:
-    // Constructors:
-    GPA(int cH, double g = 0.0) : gpa(g), creditHours(cH) { }
+
+    // Construtors
+    GPA() {};
+
+    // User input
+    double promptForGpa();
 
     // Getters
     double getGpa() const { return gpa; }
-    int getCreditHours() const { return creditHours; }
 
     // Setters
-    void setGpa(double gpa);
-    void setCreditHours(int creditHours);
-
-    // Calculate GPA
-    double calculateCGPA(int creditHours, double gpa);
+    void setGpa(double gpa) { this->gpa = gpa; }
 
     // Display
-    void display();
-    void displayMenu();
+    void displayGpa();
+
+private:
+    double gpa {};
+    double convertToInt(double gpa) const
+    {
+        return static_cast<int>(gpa);
+    }
 
 };
- 
