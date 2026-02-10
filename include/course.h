@@ -1,0 +1,39 @@
+/***********************************************************************
+ * Header File:
+ *    Course
+ * Author:
+ *    Jessen
+ * Summary:
+ *    Everything we need to know about a Course
+ ************************************************************************/
+
+#pragma once
+
+#include <string>
+
+/************************************
+ * Course
+ ************************************/
+class Course
+{
+public:
+    
+    // Constructors
+    Course(std::string course);
+    Course(std::string course, 
+           std::string courseCode, 
+           std::string professorName,
+           char letterGrade, 
+           unsigned int creditHours );
+
+private:
+    std::string course {};
+    std::string courseCode {};
+    std::string professorName {};
+    char letterGrade {};
+    unsigned int creditHours {};
+
+    // Convert letter grade to numeric
+    double convertGradeToNumeric(char letterGrade); 
+};
+
