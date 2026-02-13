@@ -34,5 +34,4 @@ private:
         return static_cast<int>(gpa);
     }
 
-
 };
