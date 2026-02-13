@@ -4,16 +4,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 // Convert Letter Grade to Numeric
 double Course::convertGradeToNumeric(char letterGrade)
 {

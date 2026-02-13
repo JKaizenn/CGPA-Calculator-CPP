@@ -10,14 +10,7 @@
 #include "gpa.h"
 #include <iostream>
 
-// User input
-double GPA::promptForGpa()
-{
-    std::cout << "Please enter your GPA: " << '\n';
-    std::cin  >> this->gpa;
 
-    return this->gpa;
-}
 
 // Display
 void GPA::displayGpa()

@@ -12,22 +12,22 @@
 #include <string>
 
 /************************************
- * Course
+ * COURSE
  ************************************/
 class Course
 {
 public:
     
     // Constructors
-    Course(std::string course);
-    Course(std::string course, 
+    Course(std::string courseName);
+    Course(std::string courseName, 
            std::string courseCode, 
            std::string professorName,
            char letterGrade, 
            unsigned int creditHours );
 
 private:
-    std::string course {};
+    std::string coursesName {};
     std::string courseCode {};
     std::string professorName {};
     char letterGrade {};
@@ -37,3 +37,4 @@ private:
     double convertGradeToNumeric(char letterGrade); 
 };
 
+w

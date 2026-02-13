@@ -19,9 +19,6 @@ public:
     // Construtors
     GPA() {};
 
-    // User input
-    double promptForGpa();
-
     // Getters
     double getGpa() const { return gpa; }
 
@@ -36,5 +33,6 @@ private:
     double convertToInt(double gpa) const {
         return static_cast<int>(gpa);
     }
+
 
 };
