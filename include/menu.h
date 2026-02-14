@@ -8,9 +8,13 @@
 
 class Menu
 {
+public:
+
+    // Menu Methods
+    void displayMenu();
 
 
-
+private:
 
 
 };

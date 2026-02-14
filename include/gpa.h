@@ -17,7 +17,7 @@ class GPA
 public:
 
     // Construtors
-    GPA() {};
+    GPA() : gpa(0.0) {};
 
     // Getters
     double getGpa() const { return gpa; }

@@ -12,6 +12,5 @@ int main()
     std::cout << "Welcome to the CGPA Calculator!" << '\n';
     gpa.displayGpa();
 
-
     return 0;
 }
