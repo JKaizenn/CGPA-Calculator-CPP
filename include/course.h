@@ -36,5 +36,3 @@ private:
     // Convert letter grade to numeric
     double convertGradeToNumeric(char letterGrade); 
 };
-
-w

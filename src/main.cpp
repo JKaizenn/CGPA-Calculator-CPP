@@ -10,7 +10,6 @@ int main()
     GPA gpa;
 
     std::cout << "Welcome to the CGPA Calculator!" << '\n';
-    gpa.promptForGpa();
     gpa.displayGpa();
 
 
