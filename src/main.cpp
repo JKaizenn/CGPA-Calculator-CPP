@@ -23,9 +23,8 @@ int main()
     // Define GPA Object
     GPA gpa;
     Menu m;
-
-
-    m.displayWelcome();
+    
+    m.displayMainMenu();
     gpa.displayGpa();
 
     return 0;

@@ -11,9 +11,7 @@ class Menu
 public:
 
     // Menu Methods
-    void displayWelcome();
-
-    void displayMenu();
+    void displayMainMenu();
 
 
 private:
