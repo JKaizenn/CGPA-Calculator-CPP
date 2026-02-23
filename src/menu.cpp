@@ -18,6 +18,7 @@ int Menu::getInput(int choice)
 **************************/
 void Menu::displayMainMenu()
 {
+    clear(); // Clear the screen
     std::cout << "\nWelcome to the CGPA Calculator!\n" << '\n';
     std::cout << "Please select from one of the following menu options: " << '\n';
     std::cout << "Menu: " << '\n';
@@ -26,7 +27,6 @@ void Menu::displayMainMenu()
               << "3. Course Menu \n"
               << "4. Quit \n"
               << '\n';
-
     // Start the user input switch statement
     int choice {0};
     while (choice != 4)
@@ -61,6 +61,7 @@ void Menu::displayMainMenu()
 **************************/
 void Menu::displayStudentMenu()
 {
+    clear(); // Clear the screen
     std::cout << "------------------- \n"
               << "STUDENT MENU: \n" 
               << '\n'
@@ -104,6 +105,7 @@ void Menu::displayStudentMenu()
 **************************/
 void Menu::displayCourseMenu()
 {
+    clear(); // Clear the screen
     std::cout << "------------------- \n"
               << "COURSE MENU: \n" 
               << '\n'

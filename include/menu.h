@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 #pragma once
 
@@ -25,6 +26,11 @@ public:
 
     // Get user choice
     int getInput(int choice);
+
+    // Helper Methods
+
+    // Clear: Clears screen after menu switch
+    void clear() { system("clear"); }  
 
 private:
     std::string menuText {};
