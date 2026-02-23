@@ -3,6 +3,10 @@
 #include <string>
 
 
+int Student::nextId = 1;
+// Constructor
+Student::Student(std::string name, int age, int schoolYear)
+: name(name), age(age), schoolYear(schoolYear), studentId(nextId++) { }
 
 
 // Display

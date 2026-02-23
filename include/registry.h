@@ -19,8 +19,9 @@ class Registry
 public:
 
 
+void addStudent(const Student& student);
 
-
+void lookupStudent(int id);
 
 
 private:
