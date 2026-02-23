@@ -7,12 +7,13 @@
  *    Everything we need to know about a Menu
  ************************************************************************/
 
+#pragma once
+
+#include "registry.h"
+#include "course.h"
 #include <iostream>
 #include <string>
 #include <cstdlib>
-
-#pragma once
-
 class Menu
 {
 public:
@@ -35,4 +36,5 @@ public:
 private:
     std::string menuText {};
     int choice {0};
+    Registry r;
 };

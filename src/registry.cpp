@@ -24,3 +24,16 @@ Student* Registry::lookupStudent(int id)
     }
     return nullptr; // If student is not found, return nullptr
 }
+
+
+/**************************
+ * DISPLAY ALL STUDENTS
+ * Displays all students in the registry
+**************************/
+void Registry::displayAllStudents()
+{
+    for (auto& student : students)
+    {
+        student.displayStudentInfo();
+    }
+}

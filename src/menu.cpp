@@ -79,9 +79,17 @@ void Menu::displayStudentMenu()
         switch(choice = getInput(choice))
         {
             case 1:
-            // TODO: Lookup Student Logic Goes Here
-            std::cout << "Finding Student..." << '\n';
-            break;
+            {
+                std::cout << "Please enter a Student ID: " << '\n';
+                int id {0};
+                std::cin >> id;
+                Student* found = r.lookupStudent(id);
+                if (found != nullptr)
+                    found->displayStudentInfo();
+                else
+                    std::cout << "Student not found.\n";
+                break;
+            }
 
             // TODO: Add Student to Registry Logic Here
             case 2:
@@ -125,6 +133,7 @@ void Menu::displayCourseMenu()
             case 1:
             // TODO: Lookup Course Logic Goes Here
             std::cout << "Finding Student..." << '\n';
+
             break;
 
             // TODO: View All Course Logic Goes Here

@@ -6,10 +6,9 @@
  * Summary:
  *    Everything we need to know about a Student
  ************************************************************************/
+#pragma once
 
 #include <string>
-
-#pragma once
 
 /************************************
  * STUDENT
