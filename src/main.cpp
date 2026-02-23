@@ -26,6 +26,7 @@ int main()
     
     m.displayMainMenu();
     gpa.displayGpa();
+    m.displayStudentMenu();
 
     return 0;
 }

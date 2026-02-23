@@ -2,6 +2,21 @@
 #include <iostream>
 
 
+
+/**************************
+ * GET INPUT
+ * Gives the user a std::cin prompt to enter their choice
+**************************/
+int Menu::getInput(int choice)
+{
+    std::cout << "Please enter a number "
+}
+
+
+
+
+
+
 /**************************
  * DISPLAY MAIN MENU
  * Displays the main menu for user input
@@ -17,3 +32,19 @@ void Menu::displayMainMenu()
               << "4. Quit \n"
               << '\n';
 }
+
+
+void Menu::displayStudentMenu()
+{
+    std::cout << "------------------- \n"
+              << "STUDENT MENU: \n" 
+              << '\n'
+              << "1. Lookup Student \n"
+              << "2. Add Student to Registry \n"
+              << "3. Display Student Info \n"
+              << "4. Back to Main Menu \n"
+              << "-------------------"
+              << '\n';
+}
+
+
