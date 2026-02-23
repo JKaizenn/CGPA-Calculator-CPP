@@ -70,6 +70,32 @@ void Menu::displayStudentMenu()
               << "4. Back to Main Menu \n"
               << "-------------------"
               << '\n';
+
+    // Start the user input switch statement
+    int choice {0};
+    while (choice != 4)
+    {
+        switch(choice = getInput(choice))
+        {
+            case 1:
+            // TODO: Lookup Student Logic Goes Here
+            std::cout << "Finding Student..." << '\n';
+            break;
+
+            // TODO: Add Student to Registry Logic Here
+            case 2:
+            std::cout << "Adding Student to Registry...\n";
+            break;
+
+            // TODO: Add Display Student Info Here
+            case 3:
+            std::cout << "Pulling Up Student Info...\n";
+            break;
+
+            default:
+            std::cout << "Returning to main menu..." << '\n';
+        }
+    }
 }
 
 /**************************
@@ -87,4 +113,30 @@ void Menu::displayCourseMenu()
               << "4. Back to Main Menu \n"
               << "-------------------"
               << '\n';
+
+    // Start the user input switch statement
+    int choice {0};
+    while (choice != 4)
+    {
+        switch(choice = getInput(choice))
+        {
+            case 1:
+            // TODO: Lookup Course Logic Goes Here
+            std::cout << "Finding Student..." << '\n';
+            break;
+
+            // TODO: View All Course Logic Goes Here
+            case 2:
+            std::cout << "Adding Student to Registry...\n";
+            break;
+
+            // TODO: Add Display Course Info Here
+            case 3:
+            std::cout << "Pulling Up Student Info...\n";
+            break;
+
+            default:
+            std::cout << "Returning to main menu..." << '\n';
+        }
+    }
 }
