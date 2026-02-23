@@ -9,4 +9,18 @@ void Registry::addStudent(const Student& student)
     students.push_back(student);
 }
 
-
+/**************************
+ * LOOKUP STUDENT
+ * Looks a student up from the registry by their ID
+**************************/
+Student* Registry::lookupStudent(int id)
+{
+    for (auto& student : students)
+    {
+        if (student.getStudentId() == id)
+        {
+            return &student;
+        }
+    }
+    return nullptr; // If student is not found, return nullptr
+}

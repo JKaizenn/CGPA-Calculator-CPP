@@ -21,7 +21,7 @@ public:
 
 void addStudent(const Student& student);
 
-void lookupStudent(int id);
+Student* lookupStudent(int id);
 
 
 private:
