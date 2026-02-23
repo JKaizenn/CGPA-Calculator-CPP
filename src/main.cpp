@@ -25,8 +25,6 @@ int main()
     Menu m;
     
     m.displayMainMenu();
-    gpa.displayGpa();
-    m.displayStudentMenu();
 
     return 0;
 }
