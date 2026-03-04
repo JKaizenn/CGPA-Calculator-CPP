@@ -18,3 +18,12 @@ void GPA::displayGpa()
 {
     std::cout << "Your gpa is: " << std::fixed << std::setprecision(3) << this->gpa << '\n';
 }
+
+/**************************
+ * CALCULATE GPA
+ * Calculates the Student's GPA using their course info
+**************************/
+void GPA::calculateGpa(const std::vector<Course>& courses)
+{
+   
+}

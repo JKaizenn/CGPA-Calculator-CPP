@@ -16,7 +16,6 @@
 class Registry
 {
 public:
-
 // Add a student to the registry
 void addStudent(const Student& student);
 

@@ -11,6 +11,7 @@
 
 #include "registry.h"
 #include "course.h"
+#include "gpa.h"
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -24,6 +25,9 @@ public:
     void displayMainMenu();
     void displayStudentMenu();
     void displayCourseMenu();
+    
+    // Calculate GPA
+    GPA calculateGPA(int);
 
     // Get user choice
     int getInput(int choice);

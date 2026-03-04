@@ -9,13 +9,15 @@
 
 #pragma once
 
+#include "course.h"
+#include <vector>
+
 /************************************
  * GPA
  ************************************/
 class GPA
 {
 public:
-
     // Construtors
     GPA() : gpa(0.0) {};
 
@@ -27,11 +29,13 @@ public:
 
     // Display
     void displayGpa();
-
+    
+    // Calculate GPA
+    void calculateGPA(const std::vector<Course>& courses);
+    
 private:
     double gpa {};
     double convertToInt(double gpa) const {
         return static_cast<int>(gpa);
     }
-
 };

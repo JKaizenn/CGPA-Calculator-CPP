@@ -40,13 +40,10 @@ public:
     void displayStudentInfo(); 
 
 private:
-
     // Member Variables 
     std::string name {};
     int age {};
     int schoolYear {};
     static int nextId; // To distinguish student ids
     int studentId {};
-
-
 };
