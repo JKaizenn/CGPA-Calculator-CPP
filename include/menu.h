@@ -41,4 +41,5 @@ private:
     std::string menuText {};
     int choice {0};
     Registry r;
+    GPA gpa;
 };

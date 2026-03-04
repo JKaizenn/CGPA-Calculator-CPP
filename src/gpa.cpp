@@ -25,5 +25,19 @@ void GPA::displayGpa()
 **************************/
 void GPA::calculateGpa(const std::vector<Course>& courses)
 {
-   
+   double totalGradePoints {0.0};
+   unsigned int totalCreditHours {0};
+
+   // Loop through all courses
+   for (const Course& course : courses)
+   {
+      totalCreditHours += course.getCreditHours();
+      totalGradePoints += course.convertGradeToNumeric(course.getLetterGrade());
+   }
+
+   // Check if there are courses and then calculate
+   if (totalCreditHours > 0)
+   {
+      this->gpa = totalGradePoints / totalCreditHours;
+   }
 }

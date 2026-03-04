@@ -22,7 +22,7 @@ void Menu::displayMainMenu()
     std::cout << "\nWelcome to the CGPA Calculator!\n" << '\n';
     std::cout << "Please select from one of the following menu options: " << '\n';
     std::cout << "Menu: " << '\n';
-    std::cout << "1. Calculate GPA by grade \n"
+    std::cout << "1. Calculate GPA \n"
               << "2. Student Menu \n"
               << "3. Course Menu \n"
               << "4. Quit \n"
@@ -34,9 +34,21 @@ void Menu::displayMainMenu()
         switch(choice = getInput(choice))
         {
             case 1:
-            // Calculate GPA Code goes here
-            std::cout << "Calculating GPA..." << '\n';
-            break;
+            {   
+               int id {0};
+               // Calculate GPA Code goes here
+               std::cout << "Please enter a Student ID:" << '\n';
+               std::cin >> id;
+               Student* found = r.lookupStudent(id);
+               if (found != nullptr)
+               {
+                  gpa.calculateGpa(found->getCourses());
+                  gpa.displayGpa();
+               }
+               else
+                  std::cout << "No student found.\n";
+               break;
+            }
 
             // Direct User to Student Menu
             case 2:

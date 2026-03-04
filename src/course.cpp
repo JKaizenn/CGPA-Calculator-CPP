@@ -5,7 +5,7 @@
 
 
 // Convert Letter Grade to Numeric
-double Course::convertGradeToNumeric(char letterGrade)
+double Course::convertGradeToNumeric(char letterGrade) const
 {
     switch (letterGrade)
     {

@@ -31,7 +31,7 @@ public:
     void displayGpa();
     
     // Calculate GPA
-    void calculateGPA(const std::vector<Course>& courses);
+    void calculateGpa(const std::vector<Course>& courses);
     
 private:
     double gpa {};

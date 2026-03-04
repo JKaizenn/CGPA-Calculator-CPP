@@ -8,7 +8,9 @@
  ************************************************************************/
 #pragma once
 
+#include "course.h"
 #include <string>
+#include <vector>
 
 /************************************
  * STUDENT
@@ -19,10 +21,11 @@ public:
     Student(std::string name, int age, int schoolYear);
 
     // Getters
-    std::string getName() const { return name;       }
-    int getAge() const          { return age;        }
-    int getSchoolYear() const   { return schoolYear; }
-    int getStudentId() const    { return studentId;  }
+    std::string getName() const                   { return name;       }
+    int getAge() const                            { return age;        }
+    int getSchoolYear() const                     { return schoolYear; }
+    int getStudentId() const                      { return studentId;  }
+    const std::vector<Course>& getCourses() const { return courses; }
   
     // Setters
     void setName(const std::string& name) { this->name = name;             }
@@ -38,6 +41,9 @@ public:
 
     // Display
     void displayStudentInfo(); 
+    
+    // Add a course
+    void addCourse(const Course& course);
 
 private:
     // Member Variables 
@@ -46,4 +52,5 @@ private:
     int schoolYear {};
     static int nextId; // To distinguish student ids
     int studentId {};
+    std::vector<Course> courses;
 };
