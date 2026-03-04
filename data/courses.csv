@@ -1,0 +1,10 @@
+studentId,courseName,courseCode,professorName,letterGrade,creditHours
+1,Calculus,MATH101,Dr. Smith,A,3
+1,English Composition,ENG101,Dr. Jones,B,3
+1,Computer Science,CS101,Dr. Brown,A,4
+2,Physics,PHYS101,Dr. White,B,3
+2,History,HIST101,Dr. Green,A,3
+3,Biology,BIOL101,Dr. Black,C,3
+3,Chemistry,CHEM101,Dr. Gray,B,4
+4,Statistics,STAT101,Dr. Adams,A,3
+4,Psychology,PSYC101,Dr. Clark,A,3
