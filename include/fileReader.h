@@ -9,11 +9,14 @@
 
 #pragma once
 
+#include "student.h"
 #include <iostream>
 #include <string>
 #include <sstream>
 #include <fstream>
 #include <map>
+#include <regex>
+#include <vector>
 
 /************************************
  * FILE READER
@@ -26,18 +29,18 @@ public:
 
    // Read File
 
+   // Read Student File
+   std::string readLine(const std::string& studentFileName);
 
-   // Create File
+   // Load 
+   std::vector<Student> loadStudent(const std::string& fileName);
 
-
-   // Update File
-
-
-   // Delete File
+   // Parse Line
+   std::vector<std::string> parseLine(const std::string& line);
 
 private:
-   std::string studentFileName {"students.csv"}
-   std::string courseFileName  {"courses.csv" }
+   std::string studentFileName {"students.csv"};
+   std::string courseFileName  {"courses.csv" };
 
 
 
