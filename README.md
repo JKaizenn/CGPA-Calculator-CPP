@@ -2,7 +2,7 @@
 
 ## Author: Jessen Forbush
 
-### Technologies: C++ 23, Make
+### Technologies: C++ 20, Make
 ### Methodolgies and Design: OOP, Design Patterns, Single Responsibility
 
 ### Program Description:
