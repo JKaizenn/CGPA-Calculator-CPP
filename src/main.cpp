@@ -1,5 +1,8 @@
 #include "menu.h"
 #include "gpa.h"
+#include "student.h"
+#include "registry.h"
+#include "fileReader.h"
 #include <iostream>
 
 // CGPA Calculator
@@ -20,9 +23,11 @@ it can generate and present the CGPA of the student.
 
 int main()
 {
-    // Define GPA Object
     GPA gpa;
-    Menu m;
+    Registry r;
+    Menu m(r);
+    FileReader fr("data/students.csv", "data/courses.csv");
+    fr.loadFromFile("data/students.csv", r);
     
     m.displayMainMenu();
 

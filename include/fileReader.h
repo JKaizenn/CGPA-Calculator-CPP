@@ -17,6 +17,7 @@
 #include <map>
 #include <regex>
 #include <vector>
+class Registry; // Forward Declare Registry
 
 /************************************
  * FILE READER
@@ -25,7 +26,7 @@ class FileReader
 {
 public:
    // Default Constructor
-   FileReader(std::string& studentFileName, std::string& courseFileName) {}
+   FileReader(const std::string& studentFileName, const std::string& courseFileName) {}
 
    // Read File
 
@@ -35,14 +36,14 @@ public:
    // Load 
    std::vector<Student> loadStudent(const std::string& fileName);
 
+   // Load File
+   void loadFromFile(const std::string& filename, Registry& r);
+
    // Parse Line
    std::vector<std::string> parseLine(const std::string& line);
 
 private:
    std::string studentFileName {"students.csv"};
    std::string courseFileName  {"courses.csv" };
-
-
-
 
 };

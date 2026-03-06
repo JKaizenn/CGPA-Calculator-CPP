@@ -1,5 +1,5 @@
 #include "fileReader.h"
-
+#include "registry.h"
 
 /**************************
  * READ LINE
@@ -56,6 +56,21 @@ std::vector<Student> FileReader::loadStudent(const std::string& fileName)
 }
 
 /**************************
+ * LOAD FROM FILE
+ * Loads student data from file into registry
+**************************/
+void FileReader::loadFromFile(const std::string& filename, Registry& r)
+{
+    std::vector<Student> students = loadStudent(filename);
+
+    for (const auto& student : students)
+    {
+        r.addStudent(student);
+    }
+    
+}
+
+/**************************
  * PARSE LINE
  * Parses a line in a CSV file to properly separate strings
 **************************/
@@ -68,4 +83,5 @@ std::vector<std::string> FileReader::parseLine(const std::string& line)
         fields.push_back(field);
     return fields;
 }
+
 

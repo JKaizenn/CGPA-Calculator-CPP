@@ -19,7 +19,7 @@ class Menu
 {
 public:
     // Constructors 
-    Menu() {menuText = "This is a menu";}
+    Menu(Registry& r) : r(r) {menuText = "This is a menu";}
 
     // Menu Methods
     void displayMainMenu();
@@ -40,6 +40,6 @@ public:
 private:
     std::string menuText {};
     int choice {0};
-    Registry r;
+    Registry& r;
     GPA gpa;
 };
