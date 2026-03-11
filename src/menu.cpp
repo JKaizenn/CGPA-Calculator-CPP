@@ -1,5 +1,6 @@
 #include "menu.h"
 #include <iostream>
+#include <limits>
 
 /**************************
  * GET INPUT
@@ -66,21 +67,11 @@ void Menu::displayMainMenu()
 **************************/
 void Menu::displayStudentMenu()
 {
-    clear(); // Clear the screen
-    std::cout << "------------------- \n"
-              << "STUDENT MENU: \n" 
-              << '\n'
-              << "1. Lookup Student \n"
-              << "2. Add Student to Registry \n"
-              << "3. Display Student Info \n"
-              << "4. Back to Main Menu \n"
-              << "-------------------"
-              << '\n';
-
     // Start the user input switch statement
     int choice {0};
     while (choice != 4)
     {
+        printStudentMenu();
         switch(choice = getInput(choice))
         {
             case 1:
@@ -96,10 +87,40 @@ void Menu::displayStudentMenu()
                 break;
             }
 
-            // TODO: Add Student to Registry Logic Here
+            // Add Student to Registry
             case 2:
-            std::cout << "Adding Student to Registry...\n";
-            break;
+            {
+                std::string name;
+                int age;
+                int schoolYear;
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "Enter name: ";
+                std::getline(std::cin, name);
+                std::cout << "Enter age: ";
+                std::cin >> age;
+                if (std::cin.fail())
+                {
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    std::cout << "Invalid input, please enter a number.\n";
+                    break;
+                }
+                std::cout << "Enter school year: (Eg: 1-4) ";
+                std::cin.ignore();
+                std::cin >> schoolYear;
+                if (std::cin.fail())
+                {
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    std::cout << "Invalid input, please enter a number.\n";
+                    break;
+                }
+                Student student(name, age, schoolYear);
+                r.addStudent(student);
+                std::cout << "Student added with ID: " << student.getStudentId() << '\n';
+                break;
+            }
 
             // Display Student Courses
             case 3:
@@ -129,21 +150,11 @@ void Menu::displayStudentMenu()
 **************************/
 void Menu::displayCourseMenu()
 {
-    clear(); // Clear the screen
-    std::cout << "------------------- \n"
-              << "COURSE MENU: \n" 
-              << '\n'
-              << "1. Lookup Course \n"
-              << "2. View All Courses \n"
-              << "3. Display Course Info \n"
-              << "4. Back to Main Menu \n"
-              << "-------------------"
-              << '\n';
-
     // Start the user input switch statement
     int choice {0};
     while (choice != 4)
     {
+        printCourseMenu();
         switch(choice = getInput(choice))
         {
             case 1:
@@ -184,4 +195,40 @@ void Menu::printMainMenu()
               << "4. Quit \n"
               << '\n';
 }
+
+/**************************
+ * PRINT STUDENT MENU
+ * Makes a reusable student menu variable
+**************************/
+void Menu::printStudentMenu()
+{
+    std::cout << "------------------- \n"
+              << "STUDENT MENU: \n" 
+              << '\n'
+              << "1. Lookup Student \n"
+              << "2. Add Student to Registry \n"
+              << "3. Display Student Info \n"
+              << "4. Back to Main Menu \n"
+              << "-------------------"
+              << '\n';
+}
+
+/**************************
+ * PRINT COURSE MENU
+ * Makes a reusable course menu variable
+**************************/
+void Menu::printCourseMenu()
+{
+    std::cout << "------------------- \n"
+              << "COURSE MENU: \n" 
+              << '\n'
+              << "1. Lookup Course \n"
+              << "2. View All Courses \n"
+              << "3. Display Course Info \n"
+              << "4. Back to Main Menu \n"
+              << "-------------------"
+              << '\n';
+}
+
+
 

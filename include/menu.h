@@ -35,6 +35,10 @@ public:
     // Helper Methods
     // Print Main Menu - Stores the main menu text and prints when called
     void printMainMenu();
+    
+    void printStudentMenu();
+
+    void printCourseMenu();
 
     // Clear: Clears screen after menu switch
     void clear() { system("clear"); }  
