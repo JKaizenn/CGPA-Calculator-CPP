@@ -90,15 +90,20 @@ void Menu::displayStudentMenu()
             // Add Student to Registry
             case 2:
             {
+                // Create student variables
                 std::string name;
                 int age;
                 int schoolYear;
+
+                // Prompt user and handle input, handles multi-spaced strings
                 std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 std::cout << "Enter name: ";
                 std::getline(std::cin, name);
                 std::cout << "Enter age: ";
                 std::cin >> age;
+
+                // Ensures user input is the correct type (int)
                 if (std::cin.fail())
                 {
                     std::cin.clear();
@@ -116,6 +121,7 @@ void Menu::displayStudentMenu()
                     std::cout << "Invalid input, please enter a number.\n";
                     break;
                 }
+                // Create a student object comprised of name, age, and school year and displays success message
                 Student student(name, age, schoolYear);
                 r.addStudent(student);
                 std::cout << "Student added with ID: " << student.getStudentId() << '\n';
