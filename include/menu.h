@@ -33,6 +33,8 @@ public:
     int getInput(int choice);
 
     // Helper Methods
+    // Print Main Menu - Stores the main menu text and prints when called
+    void printMainMenu();
 
     // Clear: Clears screen after menu switch
     void clear() { system("clear"); }  

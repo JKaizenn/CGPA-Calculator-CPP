@@ -56,6 +56,41 @@ std::vector<Student> FileReader::loadStudent(const std::string& fileName)
 }
 
 /**************************
+ * LOAD COURSES
+ * Loads course data from file and links each course to the correct student
+**************************/
+void FileReader::loadCourses(const std::string& fileName, Registry& r)
+{
+    // Open File
+    std::ifstream file(fileName);
+    std::string line;
+
+    // Check if file is open
+    if(!file.is_open())
+    {
+        std::cerr << "Error opening file!" << '\n';
+        return;    
+    }
+
+    // Skip Header in File
+    std::getline(file, line);
+
+    // Loop through each line
+    while (std::getline(file, line))
+    {
+        auto fields = parseLine(line);
+
+        Course course(fields[1], fields[2], fields[3], fields[4][0], std::stoi(fields[5]));
+
+        Student* student = r.lookupStudent(std::stoi(fields[0]));
+        if(student != nullptr)
+        {
+            student->addCourse(course);
+        }
+    }
+}
+
+/**************************
  * LOAD FROM FILE
  * Loads student data from file into registry
 **************************/

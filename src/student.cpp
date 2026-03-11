@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string>
 
-
 // Sets the student's ID
 int Student::nextId = 1;
 

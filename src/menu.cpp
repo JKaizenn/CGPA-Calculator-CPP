@@ -163,3 +163,9 @@ void Menu::displayCourseMenu()
         }
     }
 }
+
+/**************************
+ * DISPLAY COURSE MENU
+ * Displays the course menu
+**************************/
+

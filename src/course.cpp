@@ -1,10 +1,20 @@
 #include "course.h"
 
+/**************************
+ * CONSTRUCTOR
+ * Constructs a course object with various arguments
+**************************/
+Course::Course(std::string courseName, std::string courseCode, 
+               std::string professorName, char letterGrade, 
+               unsigned int creditHours)
+    : coursesName(courseName), courseCode(courseCode), 
+      professorName(professorName), letterGrade(letterGrade), 
+      creditHours(creditHours) {}
 
-
-
-
-// Convert Letter Grade to Numeric
+/**************************
+ * CONVERT GRADE TO NUMERIC
+ * Converts a char letter grade to a floating point number
+**************************/
 double Course::convertGradeToNumeric(char letterGrade) const
 {
     switch (letterGrade)

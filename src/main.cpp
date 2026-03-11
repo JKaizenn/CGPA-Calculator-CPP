@@ -28,6 +28,7 @@ int main()
     Menu m(r);
     FileReader fr("data/students.csv", "data/courses.csv");
     fr.loadFromFile("data/students.csv", r);
+    fr.loadCourses("data/courses.csv", r);
     
     m.displayMainMenu();
 
