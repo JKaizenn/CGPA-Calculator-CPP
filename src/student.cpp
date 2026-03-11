@@ -15,11 +15,23 @@ Student::Student(std::string name, int age, int schoolYear)
  * DISPLAY
  * Display all info pertaining to a student
 **************************/
-void Student::displayStudentInfo()
+void Student::displayStudentInfo() const
 {
     std::cout << "Student Name: " << this->name       << '\n';
     std::cout << "Student Age: "  << this->age        << '\n';
     std::cout << "Student Year: " << this->schoolYear << '\n';
+}
+
+/**************************
+ * DISPLAY STUDENT COURSES
+ * Displays all of a student's courses and info
+**************************/
+void Student::displayStudentCourses() const
+{
+    for (const Course& course : courses)
+    {
+        course.displayCourseInfo();
+    }
 }
 
 /**************************

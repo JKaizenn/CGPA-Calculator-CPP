@@ -10,6 +10,7 @@
 #pragma once
 
 #include <string>
+#include <iostream>
 
 /************************************
  * COURSE
@@ -36,8 +37,11 @@ public:
     // Convert letter grade to numeric
     double convertGradeToNumeric(char letterGrade) const;
 
+    // Display
+    void displayCourseInfo() const;
+
 private:
-    std::string coursesName {};
+    std::string courseName {};
     std::string courseCode {};
     std::string professorName {};
     char letterGrade {};

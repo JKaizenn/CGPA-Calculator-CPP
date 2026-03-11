@@ -28,15 +28,11 @@ public:
    // Default Constructor
    FileReader(const std::string& studentFileName, const std::string& courseFileName) {}
 
-   /**********
-    * READ
-    *********/
+   // READ
    // Read Student File
    std::string readLine(const std::string& studentFileName);
 
-   /**********
-    * LOAD 
-    *********/
+   // LOAD
    // Load Student - Takes a filename and loads a student's info
    std::vector<Student> loadStudent(const std::string& fileName);
 
@@ -48,9 +44,7 @@ public:
    student data from the file into the registry */
    void loadFromFile(const std::string& filename, Registry& r);
 
-   /**********
-    * HELPER 
-    *********/
+   // HELPER
    // Parse Line - Parses a line from a given file into a string
    std::vector<std::string> parseLine(const std::string& line);
 

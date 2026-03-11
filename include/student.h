@@ -36,12 +36,12 @@ public:
     // Get student info from user
     
 
-
     // Get student info from file
 
 
     // Display
-    void displayStudentInfo(); 
+    void displayStudentInfo()    const; 
+    void displayStudentCourses() const;
     
     // Add a course
     void addCourse(const Course& course);

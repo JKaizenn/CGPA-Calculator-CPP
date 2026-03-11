@@ -7,7 +7,7 @@
 Course::Course(std::string courseName, std::string courseCode, 
                std::string professorName, char letterGrade, 
                unsigned int creditHours)
-    : coursesName(courseName), courseCode(courseCode), 
+    : courseName(courseName), courseCode(courseCode), 
       professorName(professorName), letterGrade(letterGrade), 
       creditHours(creditHours) {}
 
@@ -26,4 +26,17 @@ double Course::convertGradeToNumeric(char letterGrade) const
         case 'F': return 0.0;
         default : return 0.0;
     }
+}
+
+/**************************
+ * DISPLAY ALL COURSES
+ * Displays all course info
+**************************/
+void Course::displayCourseInfo() const
+{
+    std::cout << "Course Name: "    << this->courseName    << '\n';
+    std::cout << "Course Code: "    << this->courseCode    << '\n';
+    std::cout << "Professor Name: " << this->professorName << '\n';
+    std::cout << "Letter Grade: "   << this->letterGrade   << '\n';
+    std::cout << "Credit Hours: "   << this->creditHours   << '\n';
 }

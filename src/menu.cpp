@@ -101,10 +101,21 @@ void Menu::displayStudentMenu()
             std::cout << "Adding Student to Registry...\n";
             break;
 
-            // TODO: Add Display Student Info Here
+            // Display Student Courses
             case 3:
-            std::cout << "Pulling Up Student Info...\n";
-            break;
+            {
+                std::cout << "Please enter a student ID: " << '\n';
+                int id {0};
+                std::cin >> id;
+                Student* found = r.lookupStudent(id);
+                if (found != nullptr)
+                {
+                    found->displayStudentCourses();
+                }
+                else
+                    std::cout << "Student not found.\n";
+                break;
+            }
 
             default:
             std::cout << "Returning to main menu..." << '\n';
