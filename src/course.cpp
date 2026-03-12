@@ -39,4 +39,5 @@ void Course::displayCourseInfo() const
     std::cout << "Professor Name: " << this->professorName << '\n';
     std::cout << "Letter Grade: "   << this->letterGrade   << '\n';
     std::cout << "Credit Hours: "   << this->creditHours   << '\n';
+    std::cout << "-----------\n";
 }

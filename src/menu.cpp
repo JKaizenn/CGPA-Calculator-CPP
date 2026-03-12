@@ -128,7 +128,7 @@ void Menu::displayStudentMenu()
                 break;
             }
 
-            // Display Student Courses
+            // Display Student Summary
             case 3:
             {
                 std::cout << "Please enter a student ID: " << '\n';
@@ -137,6 +137,9 @@ void Menu::displayStudentMenu()
                 Student* found = r.lookupStudent(id);
                 if (found != nullptr)
                 {
+                    found->displayStudentInfo();
+                    gpa.calculateGpa(found->getCourses());
+                    gpa.displayGpa();
                     found->displayStudentCourses();
                 }
                 else
@@ -185,10 +188,21 @@ void Menu::displayCourseMenu()
                 break;
             }
 
-            // TODO: View All Course Logic Goes Here
+            // View All Courses for a student
             case 2:
-            std::cout << "Adding Student to Registry...\n";
-            break;
+            {
+                std::cout << "Please enter a student ID: " << '\n';
+                int id {0};
+                std::cin >> id;
+                Student* found = r.lookupStudent(id);
+                if (found != nullptr)
+                {
+                    found->displayStudentCourses();
+                }
+                else
+                    std::cout << "Student not found.\n";
+                break;
+            }
 
             // TODO: Add Display Course Info Here
             case 3:
@@ -215,7 +229,8 @@ void Menu::printMainMenu()
               << "2. Student Menu \n"
               << "3. Course Menu \n"
               << "4. Quit \n"
-              << '\n';
+              << "-------------------"
+              << '\n';          
 }
 
 /**************************
