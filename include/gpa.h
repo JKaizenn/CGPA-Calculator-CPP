@@ -30,7 +30,7 @@ public:
     // Display
     void displayGpa();
     
-    // Calculate GPA
+    // Calculate 
     void calculateGpa(const std::vector<Course>& courses);
     
 private:

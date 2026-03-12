@@ -17,14 +17,14 @@
 class Registry
 {
 public:
-// Add a student to the registry
-void addStudent(const Student& student);
+    // Add a student to the registry
+    void addStudent(const Student& student);
 
-// Lookup a student from the regisrty
-Student* lookupStudent(int id);
+    // Lookup a student from the regisrty
+    Student* lookupStudent(int id);
 
-// Display
-void displayAllStudents();
+    // Display
+    void displayAllStudents();
 
 private:
     std::vector<Student> students {};
