@@ -33,11 +33,8 @@ public:
     void setSchoolYear(int schoolYear)    { this->schoolYear = schoolYear; }
     void setStudentId(int studentId)      { this->studentId  = studentId;  }
 
-    // Get student info from user
-    
-
-    // Get student info from file
-
+    // Lookup
+    Course* lookupStudentCourse(const std::string& course);
 
     // Display
     void displayStudentInfo()    const; 

@@ -27,8 +27,9 @@ public:
            unsigned int creditHours );
 
     // Getters
-    char getLetterGrade() const { return letterGrade; }
+    char getLetterGrade()         const { return letterGrade; }
     unsigned int getCreditHours() const { return creditHours; }
+    std::string getCourseCode()   const { return courseCode;  }
 
     // Setters
     void setLetterGrade(char letterGrade) { this->letterGrade = letterGrade; }

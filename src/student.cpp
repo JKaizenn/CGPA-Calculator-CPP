@@ -12,6 +12,20 @@ Student::Student(std::string name, int age, int schoolYear)
 : name(name), age(age), schoolYear(schoolYear), studentId(nextId++) { }
 
 /**************************
+ * LOOKUP STUDENT COURSE
+ * Looks up a student's course info
+**************************/
+Course* Student::lookupStudentCourse(const std::string& courseCode)
+{
+    for (Course& course : courses)
+    {
+        if (course.getCourseCode() == courseCode)
+            return &course;
+    }
+    return nullptr;
+}
+
+/**************************
  * DISPLAY
  * Display all info pertaining to a student
 **************************/

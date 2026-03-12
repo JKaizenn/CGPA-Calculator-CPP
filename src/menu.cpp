@@ -164,10 +164,26 @@ void Menu::displayCourseMenu()
         switch(choice = getInput(choice))
         {
             case 1:
-            // TODO: Lookup Course Logic Goes Here
-            std::cout << "Finding Student..." << '\n';
-
-            break;
+            {
+                std::cout << "Please enter a Student ID: " << '\n';
+                int id {0};
+                std::cin >> id;
+                Student* found = r.lookupStudent(id);
+                if (found != nullptr)
+                {
+                    found->displayStudentInfo();
+                    std::cout << "Please enter a Course Code: " << '\n';
+                    std::string courseCode {""};
+                    std::cin.ignore();
+                    std::getline(std::cin, courseCode);
+                    Course* foundCourse = found->lookupStudentCourse(courseCode);
+                    if (foundCourse != nullptr)
+                        foundCourse->displayCourseInfo();
+                    else
+                        std::cout << "Course not found.\n";
+                }
+                break;
+            }
 
             // TODO: View All Course Logic Goes Here
             case 2:
