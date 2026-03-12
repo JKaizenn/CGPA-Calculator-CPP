@@ -140,6 +140,7 @@ void Menu::displayStudentMenu()
                     found->displayStudentInfo();
                     gpa.calculateGpa(found->getCourses());
                     gpa.displayGpa();
+                    std::cout << "\n--- Courses ---\n\n";
                     found->displayStudentCourses();
                 }
                 else
@@ -161,7 +162,7 @@ void Menu::displayCourseMenu()
 {
     // Start the user input switch statement
     int choice {0};
-    while (choice != 4)
+    while (choice != 3)
     {
         printCourseMenu();
         switch(choice = getInput(choice))
@@ -203,11 +204,6 @@ void Menu::displayCourseMenu()
                     std::cout << "Student not found.\n";
                 break;
             }
-
-            // TODO: Add Display Course Info Here
-            case 3:
-            std::cout << "Pulling Up Student Info...\n";
-            break;
 
             default:
             std::cout << "Returning to main menu..." << '\n';
@@ -261,8 +257,7 @@ void Menu::printCourseMenu()
               << '\n'
               << "1. Lookup Course \n"
               << "2. View All Courses \n"
-              << "3. Display Course Info \n"
-              << "4. Back to Main Menu \n"
+              << "3. Back to Main Menu \n"
               << "-------------------"
               << '\n';
 }
