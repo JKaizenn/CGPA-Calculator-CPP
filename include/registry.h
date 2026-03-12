@@ -10,7 +10,6 @@
 #pragma once
 
 #include "student.h"
-#include "fileReader.h"
 #include <string>
 #include <vector>
 
